@@ -21,6 +21,7 @@ const subirArchivo = (files, extensionesValidas= ['png','jpg','jpeg','gif'], car
         // Use the mv() method to place the file somewhere on your server
         archivo.mv(uploadPath, (err) =>{
           if (err){
+            console.log('Error al cargar archivo: ', err)
               reject(err);
           }
           resolve(nombreTemp);

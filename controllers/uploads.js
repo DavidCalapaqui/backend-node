@@ -17,6 +17,7 @@ const cargarArchivo = async(req, res=response) =>{
         nombre
     });
   } catch (msg) {
+    console.log('Error al cargar archivo: ', msg)
       res.status(400).json({msg})
   }
 }
